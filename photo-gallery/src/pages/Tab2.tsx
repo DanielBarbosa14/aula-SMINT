@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 import { camera, trash, close } from 'ionicons/icons';
+import { usePhotoGallery } from '../hooks/usePhotoGallery';
 import {
   IonFab,
   IonFabButton,
@@ -14,9 +15,7 @@ import {
 } from '@ionic/react';
 
 const Tab2: React.FC = () => {
-  function takePhoto(): void {
-    throw new Error('Function not implemented.');
-  }
+  const { takePhoto } = usePhotoGallery();
 
   return (
     <IonPage>
